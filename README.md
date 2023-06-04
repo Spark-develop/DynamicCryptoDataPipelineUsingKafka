@@ -1,12 +1,9 @@
 # real-time_crypto_data_pipeline_using_kafka
-I am using confluent Kafka cluster to produce and consume scraped data.
+For the purpose of creating and consuming scraped data, I am utilising a confluent Kafka cluster.In this project, I've built a real-time data pipeline that makes use of Kafka to scrape, analyse, and load data in JSON format onto S3.
 
+Using a producer-consumer architecture to guarantee that the data is formatted correctly for loading onto S3 by making small changes as 
+However, I didn't stop there; I also created a schema catalogue by crawling the data with AWS crawler. This catalogue is used by Athena, which enables me to perform straight S3 queries without first loading the data. 
 
-In this project, I've created a real-time data pipeline that utilizes Kafka to scrape, process, and load data onto S3 in JSON format. With a producer-consumer architecture, I ensure that the data is in the right format for loading onto S3 by performing minor transformations while consuming it.
-
-But that's not all - I've also used AWS crawler to crawl the data and generate a schema catalog. Athena utilizes this catalog, allowing me to query the data directly from S3 without loading it first. This saves time and resources and enables me to get insights from the data much faster!
-
-Moreover, I've connected S3 with Snowflake using Snowpipe. As data is loaded onto S3, a SNS notification is sent to Snowpipe, which then automatically starts loading the data into Snowflake. This makes data loading a seamless and automated process, freeing up time for other important tasks.
-
+Because of this, I can analyse the data much more quickly and save time and resources.I've also used Snowpipe to link S3 and Snowflake. A SNS notice is delivered to Snowpipe as soon as data is stored onto S3, and Snowpipe then begins loading the data into Snowflake automatically. This streamlines and automates the data loading process, freeing up time for other crucial duties.
 
 ![kafka_proj](https://user-images.githubusercontent.com/128234000/235583169-ae099338-60e4-4c04-a4fb-b4707a6e743a.png)
