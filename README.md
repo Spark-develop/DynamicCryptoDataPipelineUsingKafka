@@ -1,4 +1,4 @@
-# real-time_crypto_data_pipeline_using_kafka
+# DynamicCryptoDataPipelineUsingKafka
 For the purpose of creating and consuming scraped data, I am utilising a confluent Kafka cluster.In this project, I've built a real-time data pipeline that makes use of Kafka to scrape, analyse, and load data in JSON format onto S3.
 
 Using a producer-consumer architecture to guarantee that the data is formatted correctly for loading onto S3 by making small changes as 
